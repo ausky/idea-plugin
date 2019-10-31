@@ -1,0 +1,52 @@
+<idea-plugin>
+    <id>com.ausky.idea.plugin.kill-kill-all-java</id>
+    <name>kill-all-java</name>
+    <version>1.0</version>
+    <vendor email="aohaisong1990516@126.com" url="http://www.auskt.com">ausky</vendor>
+
+    <description><![CDATA[
+        因为idea，经常关闭程序无法完全杀死java进程，每次所以关闭有点费力
+        <em>一键清空所有java进程</em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      version: 1.0.0-SNAPHOST<br/>
+      <em>功能：<br/></em>
+      1: 支持mac,windows下的进程一键关闭<br/>
+      2: 支持idea 18.2.1<br/>
+    ]]>
+    </change-notes>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.overWriteProjects.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
+
+    <actions>
+        <action id="kill-java-action" class="com.ausky.idea.plugin.KillAction" text="kill-java-action" description="kill-java-action">
+            <add-to-group group-id="EditMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="meta I"/>
+        </action>
+    </actions>
+
+    <depends>
+
+    </depends>
+
+</idea-plugin>
